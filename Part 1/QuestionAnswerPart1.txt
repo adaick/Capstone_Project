@@ -1,0 +1,71 @@
+Question 1:
+
+1.What is the granularity of the dataset ipl_matches.xlsx?
+2.What does each row represent in business terms?
+
+Repeat the above steps for :ipl_batting.xlsx
+
+
+ANSWER:-
+
+Granularity is the level of detail at which data are stored in a database. When the same data are represented in multiple databases, the granularity may differ.
+
+1). ipl_matches.xlsx :
+
+-The granularity of the datasets ipl_matches.xlsx is the combination of date and winner column.
+
+-Each row of this datasets says about the matches played on a given date between two teams and their winners.
+
+2). ipl_batting.xlsx
+
+- The granularity of the datasets ipl_batting.xlsx is match_key which is the combination of three column, i.e, match_date, team 1, team 2.
+
+- Each row of this datasets says about the batting performance of every player on a specific date whe any match played between team 1 and team 2.
+
+
+
+Question 3:
+
+	For ipl_matches.xlsx :
+		Fix the Ground column for non-standard names
+		Check and fix duplication (if any)
+
+	For ipl_batting.xlsx  :
+		Fix the match_date column for non-conformity
+		fix the R and SR column for missing values
+
+Write down an explanation of how you treated missing values.
+
+
+ANSWER:-
+	The above data quality checks can be seen in the similar excel sheet. Here i've explained the steps taken to treat those quality errors.
+
+	1).In ipl_matches.xlsx :-
+		
+		- For the ground column non-standard names are checked and treated manually.
+		- For some duplication of data i've checked wether that duplicate data is valid or not. In some cases few duplication are valid but in some cases those are not valid so those data are removed from the sheets.
+
+	2). In ipl_batting.xlsx :- 
+
+		- The match_date column for non-conformity is treated manually with the help of column transformation function. The formatting of the date are changed wherever needed.
+		- The R and SR column for missing values are fixed by applying formula for each data.
+			Formula used for fixing missing data in RUN column is-
+				RUN = (strike rate * 100)/ Ball faced
+			Formula used for fixing missing data in STRIKE RATE column is -
+				STRIKE RATE = (run / ball faced) * 100
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
